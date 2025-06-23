@@ -24,4 +24,6 @@ def chat():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    from dotenv import load_dotenv
+    load_dotenv()
+    app.run(host="0.0.0.0", port=8000)
